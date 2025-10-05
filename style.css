@@ -449,19 +449,19 @@ textarea::placeholder {
     }
 }
 
-/* --- NEW Carousel Side Arrow Style --- */
+/* --- NEW Carousel Side Arrow Style (Updated) --- */
 .carousel-side-arrow {
     background-color: rgba(44, 53, 67, 0.6); /* Blue-gray with opacity */
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(4px);
-    transition: background-color 0.3s ease, transform 0.1s ease; /* Added transform transition */
+    transition: background-color 0.3s ease; /* Removed transform transition */
 }
 .carousel-side-arrow:hover {
     background-color: rgba(44, 53, 67, 0.9); /* Darker on hover */
 }
 .carousel-side-arrow:active {
     background-color: rgba(26, 26, 26, 0.9); /* Even darker when pressed */
-    transform: scale(0.95); /* Shrinks slightly when pressed */
+    /* The transform: scale(0.95) rule that caused the jump has been removed. */
 }
 
 /* --- NEW White Ghost Button Style --- */

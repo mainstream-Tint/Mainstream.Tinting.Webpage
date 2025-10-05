@@ -312,7 +312,6 @@
         
             <div x-show="!submissionSuccess">
                 <form @submit.prevent="submitForm" id="contact-form" class="space-y-5" x-ref="form">
- <div class="g-recaptcha" data-sitekey="6LfXed8rAAAAAIfK9iKikRYPRjndpf49YFqGpy69"></div>
 
  <button type="submit" :disabled="isSubmitting" ...>                   
                     <div>
@@ -337,7 +336,7 @@
                                   x-init="$nextTick(() => { $el.style.height = `${$el.scrollHeight}px` })"
                                   @input="$el.style.height = 'auto'; $el.style.height = `${$el.scrollHeight}px`"></textarea>
                     </div>
-                    
+ <div class="g-recaptcha" data-sitekey="6LfXed8rAAAAAIfK9iKikRYPRjndpf49YFqGpy69"></div>                    
                     <button type="submit" :disabled="isSubmitting" 
                             class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-lg font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-[#FF4081] transition-colors disabled:opacity-50 btn-pink-gradient btn-lift-fixed">
                         <span>

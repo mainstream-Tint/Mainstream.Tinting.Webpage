@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential & Commercial Window Film Gallery | Mainstream Tinting</title>
+    <meta name="description" content="View our portfolio of completed residential and commercial window film projects across Northern VA, Suburban MD, and D.C.">
+    <link rel="preload" as="image" href="m-logo-new.webp" type="image/webp">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-dark text-gray-300" x-data="{}" x-cloak>
+
+<nav x-data="{ isMobileMenuOpen: false }" class="bg-brand-charcoal-t-80 backdrop-blur-md sticky top-0 z-50 shadow-lg shadow-black/20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-24"> 
+            <div class="flex-shrink-0">
+                <a href="index.html" class="block h-20 w-40"> 
+                    <picture>
+                        <source srcset="m-logo-new.webp" type="image/webp">
+                        <img src="m-logo-new.png" alt="Mainstream Tinting Logo" class="h-full w-full object-contain" decoding="async">
+                    </picture>
+                </a>
+            </div>
+            
+            <div class="hidden xl:flex items-center space-x-4">
+                <a href="services.html" class="nav-link-lift text-lg text-gray-100 hover:text-[#FF4081] px-3 py-2 rounded-md font-medium"><span>Services</span></a>
+                <a href="gallery.html" class="nav-link-lift text-lg text-gray-100 hover:text-[#FF4081] px-3 py-2 rounded-md font-medium"><span>Gallery</span></a>
+                <a href="technology.html" class="nav-link-lift text-lg text-gray-100 hover:text-[#FF4081] px-3 py-2 rounded-md font-medium"><span>Films</span></a>
+
+                <div x-data="{ open: false }" @click.away="open = false" class="relative">
+                    <button @click="open = !open" class="nav-link-lift text-lg text-gray-100 hover:text-[#FF4081] px-3 py-2 rounded-md font-medium flex items-center">
+                        <span>About</span>
+                        <svg class="w-5 h-5 ml-1 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    
+                    <div x-show="open"
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform -translate-y-2"
+                         x-transition:enter-end="opacity-100 transform translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform translate-y-0"
+                         x-transition:leave-end="opacity-0 transform -translate-y-2"
+                         class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg py-1 z-50"
+                         x-cloak>
+                        <a @click="open = false" href="index.html#about" class="block px-4 py-2 text-base text-gray-200 hover:bg-gray-700 hover:text-[#FF4081]">Why Us</a>
+                        <a @click="open = false" href="index.html#faq-contact" class="block px-4 py-2 text-base text-gray-200 hover:bg-gray-700 hover:text-[#FF4081]">FAQ</a>
+                    </div>
+                </div>
+
+                <a href="tel:7037725185" class="nav-link-lift text-lg text-[#FF4081] hover:bg-gray-800 block px-3 py-2 rounded-md font-bold"><span>Speak to a Tinting Expert</span></a>
+                <a href="index.html#contact" class="btn-pink-gradient py-3 px-8 rounded-full text-lg font-bold shadow-xl"><span>Get a Free Quote</span></a>
+            </div>
+
+            <div class="xl:hidden flex items-center space-x-2">
+<button @click="isMobileMenuOpen = !isMobileMenuOpen" type="button" id="mobile-menu-trigger" class="relative h-8 w-8 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                    <svg x-show="!isMobileMenuOpen" class="absolute h-6 w-6" x-transition fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    <svg x-show="isMobileMenuOpen" class="absolute h-6 w-6" x-transition x-cloak fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+<div x-show="isMobileMenuOpen" class="absolute w-full xl:hidden bg-brand-charcoal shadow-lg" id="mobile-menu" x-cloak>
+            <div class="px-2 pt-2 pb-3 space-y-1 text-center">
+            <a @click="isMobileMenuOpen = false" href="index.html" class="text-lg text-gray-100 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium">Home</a>
+            <a @click="isMobileMenuOpen = false" href="services.html" class="text-lg text-gray-100 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium">Services</a>
+            <a @click="isMobileMenuOpen = false" href="gallery.html" class="text-lg text-gray-100 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium">Gallery</a>
+            <a @click="isMobileMenuOpen = false" href="technology.html" class="text-lg text-gray-100 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium">Films</a>
+            <a @click="isMobileMenuOpen = false" href="index.html#about" class="text-lg text-gray-100 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium">Why Us</a>
+            <a @click="isMobileMenuOpen = false" href="index.html#faq-contact" class="text-lg text-gray-100 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md font-medium">FAQ</a>
+            <a @click="isMobileMenuOpen = false" href="tel:7037725185" class="text-lg text-[#FF4081] hover:bg-gray-700 block px-3 py-2 rounded-md font-bold">Speak to a Tinting Expert</a>
+            <a @click="isMobileMenuOpen = false" href="index.html#contact" class="btn-pink-gradient block mx-auto mt-2 w-fit px-8 py-3 rounded-full text-lg font-bold shadow-xl"><span>Get a Free Quote</span></a>
+        </div>
+    </div>
+</nav>
+
+<header class="py-16 md:py-24 text-white relative header-parallax">
+<div class="absolute inset-0 header-overlay"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <p class="text-sm font-semibold text-[#FF4081] uppercase tracking-wider mb-2">
+            <a href="index.html" class="hover:underline">Home</a> &bull; Gallery
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight font-display text-shadow">
+            Proof is in the Glass: Our DMV Work Gallery
+        </h1>
+
+        <p class="mt-4 text-xl text-white max-w-3xl mx-auto text-shadow">
+            See the quality and detail of our finished residential and commercial projects.
+        </p>
+    </div>
+</header>
+
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div x-data="galleryCarousel()">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <p class="text-lg text-gray-400">
+                See how we deliver quality results for homes and businesses across the DMV. Choose a category below to explore projects featuring enhanced privacy, solar heat control, and decorative films.
+            </p>
+        </div>
+
+<section id="gallery" class="py-8">
+    <div x-init="initCarousel()" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center flex-wrap gap-4 mb-8" role="tablist" aria-label="Gallery Categories">
+            <button @click="currentType = 'residential'"
+                    role="tab"
+                    :aria-selected="currentType === 'residential'"
+                    :class="currentType === 'residential' ? 'tab-active-pink' : 'tab-inactive-pink'"
+                    class="py-3 px-6 rounded-full text-base sm:text-xl font-semibold shadow-md w-full sm:w-auto flex items-center justify-center space-x-2 btn-lift-fixed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                <span>Residential Projects</span>
+            </button>
+            
+            <button @click="currentType = 'commercial'"
+                    role="tab"
+                    :aria-selected="currentType === 'commercial'"
+                    :class="currentType === 'commercial' ? 'tab-active-pink' : 'tab-inactive-pink'"
+                    class="py-3 px-6 rounded-full text-base sm:text-xl font-semibold shadow-md w-full sm:w-auto flex items-center justify-center space-x-2 btn-lift-fixed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                <span>Commercial Projects</span>
+            </button>
+        </div>
+
+        <div>
+            <div class="carousel-track flex snap-x snap-mandatory overflow-x-scroll scroll-smooth" x-ref="track"
+                 role="region" aria-label="A scrollable list of gallery projects">
+                <template x-if="currentType === 'residential'" :key="currentType">
+                    <template x-for="(image, index) in residentialImages" :key="index">
+                        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex-shrink-0 p-3 snap-start">
+                            <div class="rounded-lg shadow-xl overflow-hidden group">
+                                <div class="transition-all duration-300 ease-in-out group-hover:shadow-2xl">
+                                    <div class="h-80 bg-gray-800 relative rounded-lg border border-gray-700 overflow-hidden">
+                                        <picture>
+                                            <source :srcset="image.webp" type="image/webp">
+                                            <img :src="image.jpeg" :alt="image.alt" class="w-full h-full object-cover" loading="lazy" decoding="async" width="640" height="800">
+                                        </picture>
+                                        <div @click="openModal(image, index, $event.currentTarget)" class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-40 transition-all duration-300 cursor-pointer flex items-center justify-center">
+                                            <svg class="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="pointer-events: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3">
+                                        <p class="text-center text-gray-300 text-sm sm:text-base leading-snug">
+                                            <span class="font-bold" style="color: #FF4081;" x-text="image.title + ':'"></span>
+                                            <span x-text="image.description"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+                <template x-if="currentType === 'commercial'" :key="currentType">
+                    <template x-for="(image, index) in commercialImages" :key="index">
+                        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex-shrink-0 p-3 snap-start">
+                            <div class="rounded-lg shadow-xl overflow-hidden group">
+                                <div class="transition-all duration-300 ease-in-out group-hover:shadow-2xl">
+                                    <div class="h-80 bg-gray-800 relative rounded-lg border border-gray-700 overflow-hidden">
+                                        <picture>
+                                            <source :srcset="image.webp" type="image/webp">
+                                            <img :src="image.jpeg" :alt="image.alt" class="w-full h-full object-cover" loading="lazy" decoding="async" width="640" height="800">
+                                        </picture>
+                                        <div @click="openModal(image, index, $event.currentTarget)" class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-40 transition-all duration-300 cursor-pointer flex items-center justify-center">
+                                            <svg class="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="pointer-events: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3">
+                                        <p class="text-center text-gray-300 text-sm sm:text-base leading-snug">
+                                            <span class="font-bold" style="color: #FF4081;" x-text="image.title + ':'"></span>
+                                            <span x-text="image.description"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </div>
+
+<div class="flex justify-center items-center gap-4 mt-8">
+    <button @click="prevSlide()" aria-label="Previous slide" class="p-3 rounded-full shadow-lg btn-carousel-arrow">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+    </button>
+    <button @click="nextSlide()" aria-label="Next slide" class="p-3 rounded-full shadow-lg btn-carousel-arrow">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+    </button>
+</div>
+
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="index.html#contact" class="btn-pink-gradient text-center font-bold py-3 px-8 rounded-full text-lg shadow-xl whitespace-nowrap w-full sm:w-auto">
+                Get a Free Quote
+            </a>
+            <a href="https://www.instagram.com/mainstream_tinting/?hl=en" target="_blank" class="btn-ghost-white text-center py-3 px-6 rounded-full text-lg font-semibold shadow-md flex items-center justify-center whitespace-nowrap w-full sm:w-auto">
+                <svg class="h-5 w-5 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                See More on Instagram
+            </a>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+
+<div x-show="isModalOpen" 
+     x-ref="modal"
+     @keydown.escape.window="closeModal()"
+     @keydown.arrow-right.window="if (isModalOpen) nextModalImage()"
+     @keydown.arrow-left.window="if (isModalOpen) prevModalImage()"
+     @keydown.tab.prevent="handleFocus()"
+     x-transition:enter="transition ease-out duration-300"
+     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200"
+     x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+     class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[9999] p-4" 
+     role="dialog" aria-modal="true" :aria-labelledby="'modal-title-' + currentModalIndex"
+     x-cloak>
+    <div @click.away="closeModal()" class="flex items-center justify-center space-x-4">
+        <button @click="prevModalImage()" aria-label="Previous image" class="carousel-side-arrow p-3 rounded-full shadow-lg z-[10000] hidden sm:block">
+            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <div @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" class="relative max-w-4xl max-h-full">
+            <img :src="modalImage.jpeg" :alt="modalImage.alt" class="object-contain max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+            <h2 class="sr-only" :id="'modal-title-' + currentModalIndex" x-text="modalImage.title"></h2>
+            <button @click="closeModal()" aria-label="Close image viewer" class="absolute top-2 right-2 bg-gray-700 text-white rounded-full p-2 focus:outline-none hover:bg-gray-600 transition-colors"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button>
+        </div>
+        <button @click="nextModalImage()" aria-label="Next image" class="carousel-side-arrow p-3 rounded-full shadow-lg z-[10000] hidden sm:block">
+            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+    </div>
+</div>
+</div> 
+</main>
+
+<footer class="bg-brand-charcoal text-white border-t border-gray-700/50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-4 text-center md:text-left items-start">
+            <div class="space-y-4 flex flex-col items-center md:items-start md:pr-4 md:border-r md:border-gray-700 md:col-span-1 lg:col-span-1">
+                <a href="index.html" class="inline-block h-20 w-40">
+                    <picture>
+                        <source srcset="m-logo-new.webp" type="image/webp">
+                        <img src="m-logo-new.png" alt="Mainstream Tinting Logo" class="h-full w-full object-contain" decoding="async" loading="lazy">
+                    </picture>
+                </a>
+                <p class="text-sm text-gray-400">Serving Northern Virginia, Suburban Maryland, and Washington D.C.</p>
+                <p class="text-xs text-gray-400">
+                    Specializing in service for Arlington, Fairfax, Loudoun, and Prince William counties.
+                </p>
+            </div>
+            <div class="space-y-3 flex flex-col items-center md:items-center md:col-span-1 lg:col-span-1">
+                <p class="text-xl font-bold text-[#FF4081] mb-1">Quick Links</p>
+                <a href="services.html" class="text-base text-gray-100 hover:text-white transition-colors">Services</a>
+                <a href="gallery.html" class="text-base text-gray-100 hover:text-white transition-colors">Gallery</a>
+                <a href="technology.html" class="text-base text-gray-100 hover:text-white transition-colors">Films</a>
+<a href="index.html#faq-contact" class="text-base text-gray-100 hover:text-white transition-colors">FAQ</a>                <a href="index.html#about" class="text-base text-gray-100 hover:text-white transition-colors">Why Us</a>
+            </div>
+            <div class="space-y-3 flex flex-col items-center md:items-start md:pl-4 md:border-l md:border-gray-700 md:col-span-2 lg:col-span-3">
+                <p class="text-xl font-bold text-[#FF4081] mb-1">Connect</p>
+                <a href="tel:7037725185" class="text-base text-gray-300 hover:text-white transition-colors"><span class="font-bold text-gray-100">Call:</span> (703) 772-5185</a>
+                <a href="mailto:mainstreamtint@gmail.com" class="text-base text-gray-300 hover:text-white transition-colors"><span class="font-bold text-gray-100">Email:</span> mainstreamtint@gmail.com</a>
+                <a href="https://www.instagram.com/mainstream_tinting/?hl=en" target="_blank" rel="noopener noreferrer" class="text-base text-gray-300 hover:text-white transition-colors"><span class="font-bold text-gray-100">Instagram:</span> @mainstream_tinting</a>
+            </div>
+        </div>
+        <div class="text-sm text-gray-500 text-center pt-8 mt-8 border-t border-gray-700/50">
+<div class="mb-4 space-x-4">
+    <a href="Privacy_Policy.html" class="text-gray-100 hover:text-white underline transition-colors">Privacy Policy</a>
+    <a href="Terms_of_Service.html" class="text-gray-100 hover:text-white underline transition-colors">Terms of Service</a>
+    <a href="Accessibility_Statement.html" class="text-gray-100 hover:text-white underline transition-colors">Accessibility</a>
+</div>
+            &copy; <span id="current-year"></span> Mainstream Tinting. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<button id="back-to-top" aria-label="Scroll back to top" class="p-3 rounded-full shadow-lg transition-colors">
+    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+</button>
+
+<script src="main.js" defer></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('load', () => { window.scrollTo({ top: 0, behavior: 'instant' }); });
+    });
+
+    function galleryCarousel() {
+        return {
+            currentType: 'residential',
+            isModalOpen: false,
+            modalImage: {},
+            currentModalIndex: null,
+            touchStartX: 0,
+            touchEndX: 0,
+            lastFocusedElement: null,
+            
+            residentialImages: [
+                { webp: 'restallroom.webp', jpeg: 'restallroom.jpeg', title: 'Solar Film', description: 'Expertly controls heat and adds daytime privacy.', alt: 'Tall living room windows with solar film applied.' },
+                { webp: 'ResBackground.webp', jpeg: 'ResBackground.jpeg', title: '60% Solar Film', description: 'Balances excellent heat rejection with bright, natural light.', alt: 'Interior view of a home with 60% solar film on the windows.' },
+                { webp: 'respoolroom.webp', jpeg: 'respoolroom.jpeg', title: '50% Solar Film', description: 'Reduces harsh glare, heat gain, and furniture fading.', alt: 'Indoor pool room with large windows tinted with 50% solar film.' },
+                { webp: 'resbath.webp', jpeg: 'resbath.jpeg', title: 'Frosted Film', description: 'Creates elegant, 24/7 privacy without blocking natural light.', alt: 'Bathroom window with elegant frosted privacy film.' },
+                { webp: 'resoffice.webp', jpeg: 'resoffice.jpeg', title: 'Dusted Crystal Film', description: 'Provides stylish, professional privacy for home offices.', alt: 'Home office glass door with dusted crystal privacy film.' },
+                { webp: 'Res7.webp', jpeg: 'Res7.jpeg', title: '7% Reflective Film', description: 'Delivers maximum heat rejection and daytime privacy.', alt: 'Exterior view of a home with highly reflective 7% window film.' },
+                { webp: 'Res70.webp', jpeg: 'Res70.jpeg', title: '70% Clear UV Film', description: 'Blocks 99.9% of damaging sun rays without darkening rooms.', alt: 'Brightly lit room with nearly invisible 70% clear UV film on windows.' }
+            ],
+            commercialImages: [
+                { webp: 'comvt.webp', jpeg: 'comvt.jpeg', title: 'Custom Graphics', description: 'Opaque decorative film cut precisely to frame the brand logo.', alt: 'Virginia Tech logo applied to a glass door using custom cut film.' },
+                { webp: 'comoffice.webp', jpeg: 'comoffice.jpeg', title: 'Frosted Privacy', description: 'Stylish frosted film on modern, glass-walled office.', alt: 'Modern office with glass walls covered in frosted privacy film.' },
+                { webp: 'comreflect.webp', jpeg: 'comreflect.jpeg', title: 'Reflective Film', description: '17% reflective film blocks heat, providing total daytime privacy.', alt: 'Commercial building exterior showing windows with 17% reflective film.' },
+                { webp: 'com48.webp', jpeg: 'com48.jpeg', title: 'Privacy Bands', description: 'Frosted crystal film installed on a modern conference room.', alt: 'Glass conference room with horizontal bands of frosted crystal privacy film.' },
+                { webp: 'comblack.webp', jpeg: 'comblack.jpeg', title: 'Blackout Film', description: 'Provides maximum privacy and light control for a uniform look.', alt: 'Windows completely covered with black opaque film for total privacy.' },
+                { webp: 'ComOfficeDoor.webp', jpeg: 'ComOfficeDoor.jpeg', title: 'Industrial Privacy', description: 'Whiteout film for functional privacy in a warehouse setting.', alt: 'Warehouse office door with whiteout privacy film applied.' },
+                { webp: 'Removalpic.webp', jpeg: 'Removalpic.jpeg', title: 'Large-Scale Projects', description: 'Specializing in film removal and replacement for large commercial storefronts.', alt: 'Technician removing old, bubbled window film from a large commercial window.' }
+            ],
+
+            initCarousel() { this.$watch('currentType', () => { this.$refs.track.scrollLeft = 0; }); },
+            
+            prevSlide() { 
+                const track = this.$refs.track; 
+                const slide = track.querySelector('.flex-shrink-0:not([style*="display: none"])');
+                if (!slide) return;
+                const slideWidth = slide.offsetWidth; 
+                track.scrollBy({ left: -slideWidth, behavior: 'smooth' }); 
+            },
+            nextSlide() { 
+                const track = this.$refs.track;
+                const slide = track.querySelector('.flex-shrink-0:not([style*="display: none"])');
+                if (!slide) return;
+                const slideWidth = slide.offsetWidth; 
+                if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 1) { 
+                    track.scrollTo({ left: 0, behavior: 'smooth' }); 
+                } else { 
+                    track.scrollBy({ left: slideWidth, behavior: 'smooth' }); 
+                } 
+            },
+            
+            prevModalImage() {
+                const imageArray = this.currentType === 'residential' ? this.residentialImages : this.commercialImages;
+                this.currentModalIndex = (this.currentModalIndex - 1 + imageArray.length) % imageArray.length;
+                this.modalImage = imageArray[this.currentModalIndex];
+            },
+            nextModalImage() {
+                const imageArray = this.currentType === 'residential' ? this.residentialImages : this.commercialImages;
+                this.currentModalIndex = (this.currentModalIndex + 1) % imageArray.length;
+                this.modalImage = imageArray[this.currentModalIndex];
+            },
+
+            openModal(image, index, triggerElement) {
+                this.modalImage = image;
+                this.currentModalIndex = index;
+                this.isModalOpen = true;
+                this.lastFocusedElement = triggerElement;
+                this.$nextTick(() => {
+                    this.$refs.modal.querySelectorAll('button')[0].focus();
+                });
+            },
+            closeModal() {
+                this.isModalOpen = false;
+                if (this.lastFocusedElement) {
+                    this.lastFocusedElement.focus();
+                }
+            },
+            handleFocus() {
+                const focusableElements = Array.from(this.$refs.modal.querySelectorAll('button'));
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                if (event.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        lastElement.focus();
+                        event.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        firstElement.focus();
+                        event.preventDefault();
+                    }
+                }
+            },
+
+            handleTouchStart(e) { this.touchStartX = e.touches[0].clientX; this.touchEndX = e.touches[0].clientX; },
+            handleTouchMove(e) { this.touchEndX = e.touches[0].clientX; },
+            handleTouchEnd() { if (this.touchStartX - this.touchEndX > 75) { this.nextModalImage(); } else if (this.touchEndX - this.touchStartX > 75) { this.prevModalImage(); } }
+        }
+    }
+</script>
+</body>
+</html>

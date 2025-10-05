@@ -1,0 +1,520 @@
+/* --- Global Settings & Fonts --- */
+html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 7rem; /* Add this line */
+}
+body { 
+    font-family: 'Inter', sans-serif; 
+    font-size: 1.125rem; 
+    background-color: #1A1A1A; 
+}
+* { 
+    -webkit-tap-highlight-color: transparent; 
+}
+[x-cloak] { 
+    display: none !important; 
+}
+
+/* --- Typography & Shadows --- */
+.font-display { 
+    font-family: 'Lora', serif; 
+}
+.text-shadow { 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+/* --- Accessibility: High-Contrast Placeholders --- */
+input::placeholder,
+textarea::placeholder {
+    color: #9CA3AF; /* Tailwind gray-400 */
+    opacity: 1; /* Ensures full color visibility in all browsers */
+}
+
+/* --- REFINED BUTTONS & LINKS --- */
+/* Primary CTA Button: The new animated gradient */
+.btn-pink-gradient {
+    background-image: linear-gradient(to right, #FF4081 0%, #F75A91 50%, #FF4081 100%);
+    background-size: 200% 100%;
+    color: #1A1A1A;
+    transition: background-position 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+.btn-pink-gradient:hover {
+    background-position: 100% 0; /* This slides the gradient for an animated effect */
+}
+
+/* Secondary "Ghost" Button Style */
+.btn-ghost-pink {
+    background-color: transparent;
+    border: 2px solid #FF4081;
+    color: #FF4081;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+.btn-ghost-pink:hover {
+    background-color: #FF4081;
+    color: #1A1A1A;
+}
+
+/* General text lift effect for buttons */
+.btn-pink-gradient span,
+.btn-ghost-pink span,
+.btn-lift-fixed span {
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+}
+.btn-pink-gradient:hover span,
+.btn-ghost-pink:hover span,
+.btn-lift-fixed:hover span { 
+    transform: translateY(-3px); 
+}
+
+/* Style for Sunken Active Tabs (Used on Films Page) */
+.tab-active-sunken {
+    background-color: #1f2937;
+    color: #FF4081 !important;
+    font-weight: 700;
+    border: 2px solid #FF4081;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* --- REFINED NAVIGATION --- */
+/* Active Navigation Link Style */
+
+.nav-link-lift span {
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+}
+.nav-link-lift:hover span { 
+    transform: translateY(-2px); 
+}
+
+/* Style for Active Tabs (Pink Ghost Style) */
+.tab-active-pink {
+    background-color: #1A1A1A; /* Page Background Color */
+    color: #FF4081 !important; /* Pink Text */
+    font-weight: 700;
+    border: 2px solid #FF4081; /* Pink Border */
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.25); /* Subtle Pink Glow */
+}
+/* Style for Inactive Tabs */
+.tab-inactive-pink {
+    background-color: #1A1A1A; /* Page Background Color */
+    color: #D1D5DB; /* White/Gray Text */
+    border: 2px solid #6B7280; /* White/Gray Border */
+    transition: all 0.3s ease;
+}
+.tab-inactive-pink:hover {
+    color: #FF4081; /* Only the text color changes to pink */
+}
+.bg-brand-charcoal {
+    background-color: #1A1A1A;
+}
+
+.bg-brand-charcoal-t-80 {
+    background-color: rgba(26, 26, 26, 0.8);
+}
+
+/* --- Parallax Backgrounds --- */
+/* --- NEW Header Overlay Style --- */
+.header-overlay {
+    background-color: rgba(26, 26, 26, 0.8); /* Darker 80% overlay */
+}
+.header-parallax, .hero, .contact-bg { background-attachment: fixed; }
+.header-parallax { background-image: url('SchoolBackgroundPic.jpeg'); background-size: cover; background-position: center; }
+.hero {
+    position: relative;
+    min-height: 65vh; 
+    background-image: url('SchoolBackgroundPic.jpeg');
+    background-size: cover;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+}
+.contact-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+.hero-overlay { background-color: rgba(26, 26, 26, 0.7); position: absolute; inset: 0; z-index: 10; }
+
+/* --- Page-Specific & Utility Styles --- */
+.reveal-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.revealed { opacity: 1; transform: translateY(0); }
+.tab-content { transition: all 0.4s ease-in-out; }
+.video-thumbnail-container .play-icon { transition: all 0.3s ease-in-out; }
+.video-thumbnail-container:hover .play-icon { transform: scale(1.15); }
+.gallery-desc-tile {
+    /* Styles are now handled by utility classes in the HTML */
+}
+.gallery-desc-tile .font-bold {
+    color: #FF4081;
+}
+.carousel-track::-webkit-scrollbar { height: 8px; }
+.carousel-track::-webkit-scrollbar-track { background: #374151; border-radius: 4px; }
+.carousel-track::-webkit-scrollbar-thumb { background: #6b7280; border-radius: 4px; }
+.carousel-track::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+.fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in-up.is-visible { opacity: 1; transform: translateY(0); }
+.custom-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+}
+
+/* --- Back to Top Button --- */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.2s ease-out;
+    background-color: #FF4081;
+    color: #1A1A1A;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    /* HOPPING ANIMATION IS PERMANENTLY REMOVED */
+}
+#back-to-top:hover {
+    background-color: #F75A91;
+    transform: translateY(-3px);
+}
+/* @keyframes hop rule has been deleted */
+
+/* --- Media Queries --- */
+@media (min-width: 768px) { .hero { min-height: 72vh; background-position: center 40%; } }
+@media (orientation: landscape) and (max-height: 500px) { .hero { min-height: 100vh; } }
+@media (max-width: 1366px) { .header-parallax, .hero, .contact-bg { background-attachment: scroll; } .hero { background-position: center center; } }
+
+/* --- AWESOME 'ABOUT US' SECTION --- */
+#about {
+    transition: all 0.5s ease-in-out;
+}
+#about .profile-ring {
+    outline: 2px solid #FF4081;
+    outline-offset: 8px;
+    box-shadow: 0 0 25px rgba(255, 64, 129, 0.5);
+}
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.3s ease-out;
+}
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+.feature-item .icon {
+    flex-shrink: 0;
+    height: 2.5rem; /* Slightly smaller for better balance */
+    width: 2.5rem;
+    margin-right: 1rem;
+    color: #FF4081;
+}
+
+/* --- AWESOME 'BEFORE & AFTER' SHOWCASE --- */
+/* --- AWESOME 'BEFORE & AFTER' SHOWCASE --- */
+#before-after {
+    /* Spacing is now handled in the HTML file */
+}
+.showcase-frame {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(255, 64, 129, 0.5);
+    animation: pulse-glow 3s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+.showcase-frame:hover {
+    transform: scale(1.03);
+    animation-play-state: paused;
+}
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 2px rgba(255, 64, 129, 0.5), 0 0 15px rgba(0,0,0,0.5); }
+    50% { box-shadow: 0 0 0 4px rgba(255, 64, 129, 1), 0 0 35px rgba(255, 64, 129, 0.3); }
+}
+.showcase-frame .image-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    box-shadow: inset 0 4px 15px rgba(0,0,0,0.7);
+}
+.showcase-frame .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.showcase-image {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.showcase-label {
+    position: absolute;
+    top: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    text-shadow: 0 1px 2px black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.showcase-label.before { left: 1rem; }
+.showcase-label.after { right: 1rem; color: #FF4081; }
+
+#stats-section {
+    /* Styles moved to the HTML for better control */
+}
+.stat-card {
+    text-align: center;
+}
+
+.stat-card .icon {
+    color: #FF4081;
+    margin-bottom: 1rem;
+}
+.stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #FFFFFF; /* Changed to white */
+    line-height: 1;
+}
+.stat-card .stat-label {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #9CA3AF;
+}
+
+/* --- AWESOME MOBILE NAVIGATION CARDS (Refined Ghost Style) --- */
+.mobile-nav-section {
+    background-color: #2C3543;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 20;
+}
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 26, 26, 0.4); /* Dark Card BG */
+    border: 1px solid #4B5563; /* Subtle Gray Outline */
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+.nav-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(26, 26, 26, 0.7);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.nav-card .icon {
+    color: #FF4081;
+    margin-bottom: 0.75rem;
+}
+.nav-card .label {
+    font-weight: 600; /* semibold */
+    font-size: 1rem;
+    color: #E5E7EB; /* Changed to light gray for better readability */
+}
+
+/* --- AWESOME CONTACT FORM SECTION --- */
+#contact {
+    background-color: #2C3543;
+    border: 1px solid #4B5563;
+}
+.benefit-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(26, 26, 26, 0.4);
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #4B5563;
+}
+.benefit-item .icon {
+    flex-shrink: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 64, 129, 0.1);
+    color: #FF4081;
+}
+
+/* --- AWESOME SERVICES PAGE CARDS (Compact) --- */
+.service-feature-panel {
+    /* Background removed for minimalist style */
+}
+.service-feature-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.service-feature-panel li {
+    display: flex;
+    align-items: flex-start;
+    color: #D1D5DB;
+    font-weight: 500;
+}
+.service-feature-panel li svg {
+    flex-shrink: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+    color: #FF4081;
+}
+
+/* --- AWESOME 'NEXT STEPS' SECTION --- */
+.awesome-cta-block {
+    /* This class is no longer needed, spacing is handled in the HTML */
+}
+
+/* --- Helper Class to Prevent Hover Lift --- */
+.hover-no-lift:hover {
+    transform: none !important;
+}
+
+
+/* --- AWESOME FILMS PAGE SLIDES --- */
+.film-slide-panel {
+    /* Background removed for minimalist style */
+    border-top: 2px solid #FF4081; 
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+.film-slide-panel .film-name {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.film-slide-panel .film-description {
+    color: #D1D5DB;
+    font-size: 1.125rem;
+}
+.film-slide-panel .benefit-heading {
+    color: #FF4081;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+/* --- AWESOME FAQ PAGE --- */
+#faq-section {
+    background-color: #2C3543;
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid #4B5563;
+}
+.faq-item {
+    background-color: rgba(26, 26, 26, 0.4);
+    border: 1px solid #4B5563;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem; /* Reduced padding for a tighter look */
+    transition: background-color 0.3s ease;
+}
+.faq-item:hover {
+    background-color: rgba(26, 26, 26, 0.7);
+}
+.faq-question {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600; /* semibold */
+    color: #FFFFFF; /* Changed to white */
+}
+.faq-answer {
+    color: #D1D5DB;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* --- AWESOME FILMS PAGE (Mobile) --- */
+.film-card-mobile {
+    /* Background removed for minimalist style */
+    border-top: 4px solid #FF4081;
+}
+
+/* --- Fix for Mobile Hero Cards in Landscape View --- */
+@media (max-height: 500px) and (max-width: 900px) {
+    .mobile-hero-cards {
+        margin-top: 2rem !important; /* Removes the negative margin and pushes cards down */
+    }
+}
+
+/* --- NEW Carousel Side Arrow Style --- */
+.carousel-side-arrow {
+    background-color: rgba(44, 53, 67, 0.6); /* Blue-gray with opacity */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Added transform transition */
+}
+.carousel-side-arrow:hover {
+    background-color: rgba(44, 53, 67, 0.9); /* Darker on hover */
+}
+.carousel-side-arrow:active {
+    background-color: rgba(26, 26, 26, 0.9); /* Even darker when pressed */
+    transform: scale(0.95); /* Shrinks slightly when pressed */
+}
+
+/* --- NEW White Ghost Button Style --- */
+.btn-ghost-white {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+.btn-ghost-white:hover {
+    background-color: #FFFFFF;
+    color: #1A1A1A; /* Dark charcoal text on hover */
+}
+.btn-ghost-white span {
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+}
+.btn-ghost-white:hover span {
+    transform: translateY(-3px);
+}
+
+
+
+/* --- NEW Color & Glow Logic --- */
+/* Style for when the menu is OPEN (works on all devices) */
+#mobile-menu-trigger.is-open {
+    color: #FF4081;
+    background-color: rgba(255, 64, 129, 0.1);
+    border-color: rgba(255, 64, 129, 0.5);
+}
+
+/* Style for HOVER effect (only applies on devices that can truly hover, like desktops) */
+@media (hover: hover) and (pointer: fine) {
+    #mobile-menu-trigger:hover {
+        color: #FF4081;
+        background-color: rgba(255, 64, 129, 0.1);
+        border-color: rgba(255, 64, 129, 0.5);
+    }
+}
+
+/* Animation Logic for when 'is-open' class is active */
+#mobile-menu-trigger.is-open .line1 {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+#mobile-menu-trigger.is-open .line2 {
+    opacity: 0;
+}
+
+#mobile-menu-trigger.is-open .line3 {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+/* --- NEW --- Mobile Sticky Nav Transition --- */
+#mobile-sticky-nav {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}

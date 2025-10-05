@@ -111,7 +111,7 @@
 
 <section id="gallery" class="py-8">
     <div x-init="initCarousel()" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-center flex-wrap gap-4 mb-8" role="tablist" aria-label="Gallery Categories">
+<div class="flex justify-center flex-wrap gap-4 mb-8" role="tablist" aria-label="Gallery Categories">
             <button @click="currentType = 'residential'"
                     role="tab"
                     :aria-selected="currentType === 'residential'"
@@ -131,7 +131,7 @@
             </button>
         </div>
 
-        <div>
+        <div class="relative">
             <div class="carousel-track flex snap-x snap-mandatory overflow-x-scroll scroll-smooth" x-ref="track"
                  role="region" aria-label="A scrollable list of gallery projects">
                 <template x-if="currentType === 'residential'" :key="currentType">
@@ -185,16 +185,15 @@
                     </template>
                 </template>
             </div>
-        </div>
 
-<div class="flex justify-center items-center gap-4 mt-8">
-    <button @click="prevSlide()" aria-label="Previous slide" class="p-3 rounded-full shadow-lg btn-carousel-arrow">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
-    </button>
-    <button @click="nextSlide()" aria-label="Next slide" class="p-3 rounded-full shadow-lg btn-carousel-arrow">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-    </button>
-</div>
+            <button @click="prevSlide()" aria-label="Previous slide" class="carousel-side-arrow absolute top-1/2 left-0 -translate-y-1/2 transform md:-translate-x-12 z-10 p-3 rounded-full shadow-lg hidden md:flex items-center justify-center">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+    
+            <button @click="nextSlide()" aria-label="Next slide" class="carousel-side-arrow absolute top-1/2 right-0 -translate-y-1/2 transform md:translate-x-12 z-10 p-3 rounded-full shadow-lg hidden md:flex items-center justify-center">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </div>
 
 <section class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

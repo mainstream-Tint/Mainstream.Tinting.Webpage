@@ -216,7 +216,6 @@ textarea::placeholder {
 }
 
 /* --- AWESOME 'BEFORE & AFTER' SHOWCASE --- */
-/* --- AWESOME 'BEFORE & AFTER' SHOWCASE --- */
 #before-after {
     /* Spacing is now handled in the HTML file */
 }
@@ -518,3 +517,4 @@ textarea::placeholder {
 #mobile-sticky-nav {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+

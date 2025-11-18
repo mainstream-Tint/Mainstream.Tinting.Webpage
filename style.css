@@ -1,6 +1,7 @@
 /* --- Global Settings & Fonts --- */
 html { 
     scroll-behavior: smooth; 
+    scroll-padding-top: 7rem;
     background-color: #1A1A1A; /* This is the fix */
 }
 body { 
@@ -13,11 +14,6 @@ body {
 }
 [x-cloak] { 
     display: none !important; 
-}
-
-/* GLOBAL / ALL PAGES: Fix 1. Mobile menu: double scroll fix */
-body.overflow-hidden { 
-    overflow: hidden; 
 }
 
 /* --- Active Navigation Link Style --- */
@@ -136,13 +132,13 @@ textarea::placeholder {
     background-color: rgba(26, 26, 26, 0.8); /* Darker 80% overlay */
 }
 .header-parallax, .hero, .contact-bg { background-attachment: fixed; }
-.header-parallax { background-image: url('SchoolBackgroundPic.webp'); background-size: cover; background-position: center; }
+.header-parallax { background-image: url('SchoolBackgroundPic.jpeg'); background-size: cover; background-position: center; }
 .hero {
     position: relative;
     min-height: 65vh; 
-    background-image: url('SchoolBackgroundPic.webp');
+    background-image: url('SchoolBackgroundPic.jpeg');
     background-size: cover;
-    background-position: center center; /* FIX: Improved Mobile Hero Readability */
+    background-position: 80% center;
     background-repeat: no-repeat;
 }
 .contact-bg {
@@ -164,10 +160,6 @@ textarea::placeholder {
 .gallery-desc-tile .font-bold {
     color: #FF4081;
 }
-.carousel-track {
-    scroll-padding-left: 1rem; /* Aligns scroll-snap correctly */
-}
-
 .carousel-track::-webkit-scrollbar { height: 8px; }
 .carousel-track::-webkit-scrollbar-track { background: #374151; border-radius: 4px; }
 .carousel-track::-webkit-scrollbar-thumb { background: #6b7280; border-radius: 4px; }
@@ -222,29 +214,6 @@ textarea::placeholder {
     display: flex;
     align-items: flex-start;
     transition: all 0.3s ease-out;
-}
-/* --- Reusable Card Hover Effect (UPDATED) --- */
-/* --- Reusable Card Hover Effect --- */
-.card-lift-hover {
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-    /* Persistent shadow for depth and subtle glow */
-    box-shadow: 
-        0 4px 8px rgba(0,0,0,0.4), 
-        0 0 5px rgba(255, 64, 129, 0.1); 
-}
-.card-lift-hover:hover {
-    transform: translateY(-5px);
-    /* Enhanced shadow and glow on hover */
-    box-shadow: 
-        0 10px 20px rgba(0,0,0,0.5), 
-        0 0 20px rgba(255, 64, 129, 0.4); 
-}
-.card-lift-hover:hover {
-    transform: translateY(-5px);
-    /* Adds a stronger black shadow for lift AND a subtle pink glow */
-    box-shadow: 
-        0 10px 20px rgba(0,0,0,0.5), 
-        0 0 20px rgba(255, 64, 129, 0.4); 
 }
 .feature-item:hover {
     transform: translateY(-5px);
@@ -477,11 +446,6 @@ textarea::placeholder {
     line-height: 1.7;
 }
 
-/* AREAS-WE-SERVE: Accordion interaction hierarchy - Increase padding for sub-levels */
-.faq-answer { 
-    padding-left: 0.25rem; 
-}
-
 /* --- AWESOME FILMS PAGE (Mobile) --- */
 .film-card-mobile {
     /* Background removed for minimalist style */
@@ -563,172 +527,4 @@ textarea::placeholder {
 /* --- NEW --- Mobile Sticky Nav Transition --- */
 #mobile-sticky-nav {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* --- Accessibility Focus Styles --- */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-    outline: 3px solid #FF4081;
-    outline-offset: 2px;
-    border-radius: 4px;
-}
-.nav-link-lift:focus-visible {
-    border-radius: 4px;
-}
-iframe[title="reCAPTCHA"]:focus-visible {
-    outline: 3px solid #FF4081;
-    outline-offset: 2px;
-}
-
-/* FIX: Disable background-attachment: fixed on touch devices */
-@media (hover: none) and (pointer: coarse) {
-  .header-parallax, .hero, .contact-bg {
-    background-attachment: scroll !important;
-  }
-}
-/* --- Mobile Tap-Target Fixes --- */
-@media (max-width: 640px) {
-  
-  /* Increases padding on CTA buttons for easier tapping */
-  .btn-pink-gradient,
-  .btn-ghost-white {
-    padding-top: 0.9rem !important;
-    padding-bottom: 0.9rem !important;
-  }
-
-  /* Increases padding on mobile menu links */
-  #mobile-menu a {
-    padding-top: 0.9rem !important;
-    padding-bottom: 0.9rem !important;
-  }
-}
-/* --- Mobile Performance Fix: Disable Heavy Shadows --- */
-@media (max-width: 640px) {
-  .shadow-lg,
-  .shadow-xl,
-  .shadow-2xl {
-     box-shadow: none !important;
-  }
-}
-/* --- Mobile Layout Fixes (480px and below) --- */
-@media (max-width: 480px) {
-
-  /* Reduce text sizes for a tighter layout */
-  h1 { 
-    font-size: 1.9rem !important; 
-    line-height: 1.2;
-  }
-  h2 { font-size: 1.5rem !important; }
-  h3 { font-size: 1.25rem !important; }
-
-  /* Reduce body text size slightly */
-  body, p, li, span {
-    font-size: 1rem !important;
-  }
-  
-  /* Reduce vertical padding on main sections */
-  main section { 
-    padding-top: 2.5rem !important; 
-    padding-bottom: 2.5rem !important; 
-  }
-}
-/* --- Tablet & iPad Fixes --- */
-
-/* Fix: Disable hover "lift" animations on touch devices */
-@media (pointer: coarse) {
-  .btn-lift-fixed:hover span,
-  .nav-link-lift:hover span {
-     transform: none !important;
-  }
-}
-
-/* Fix: Layout rules for iPad portrait & split-screen (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-   /* Center the hero background image */
-   .hero { 
-     background-position: center center !important; 
-   }
-
-   /* Make gallery cards larger on tablets */
-   .carousel-track > div[class*="lg:w-1/4"] {
-     flex-basis: 33.33% !important;
-     max-width: 33.33% !important;
-   }
-}
-
-/* Fix: Shrink nav bar on iPad landscape for more screen space */
-@media (max-height: 700px) and (orientation: landscape) {
-  nav.h-24 { 
-    height: 72px !important; 
-  }
-}
-/* --- Tablet & Large Desktop Layout Fixes --- */
-
-/* Tablet: Fix video aspect ratio & scale headings */
-@media (min-width: 768px) and (max-width: 1024px) {
-   /* Fixes video aspect ratio on services page */
-   .aspect-\[3\/4\] {
-      aspect-ratio: 4/3 !important;
-   }
-   
-   /* Scales down large headings */
-   h1 { font-size: 2.75rem !important; }
-   h2 { font-size: 1.75rem !important; }
-}
-
-/* Large Desktops (1440p+): Widen layout */
-@media (min-width: 1600px) {
-   .container {
-      max-width: 1400px !important;
-   }
-   
-   /* Widen gallery cards */
-   .carousel-track > div[class*="xl:w-1/5"] {
-      flex-basis: 20% !important; /* Use 20% to match w-1/5 */
-      max-width: 20% !important;
-   }
-
-   /* Adjust hero parallax for ultra-wide */
-   .hero {
-      background-position: center 30% !important;
-   }
-
-   /* Reduce excessive vertical padding */
-   main section {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-   }
-
-   /* Enlarge the Before/After showcase */
-   .showcase-frame {
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-   }
-}
-
-/* Enlarge footer on all larger screens */
-@media (min-width: 1280px) {
-   footer .container {
-      padding-top: 3rem !important;
-      padding-bottom: 3rem !important;
-   }
-}
-/* --- Accessibility: Skip to Content Link --- */
-.skip-link {
-    position: absolute;
-    top: -999px;
-    left: -999px;
-    background: #ffffff;
-    color: #1A1A1A;
-    padding: 1rem;
-    font-weight: 700;
-    z-index: 9999;
-    border-radius: 0 0 8px 8px;
-}
-.skip-link:focus {
-    top: 0;
-    left: 1rem;
 }
